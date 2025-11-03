@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おしゃれなWebページ（単一HTML構成）</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>おしゃれなWebページの例</h1>
+    <nav>
+      <ul>
+        <li><a data-page="home">ホーム</a></li>
+        <li><a data-page="articles">記事一覧</a></li>
+        <li><a data-page="contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ホーム -->
+    <section id="home" class="page active">
+      <div class="hero">
+        <h2>ようこそ！</h2>
+        <p>ここはトップページです。</p>
+      </div>
+      <p>このサイトでは、いろいろな記事や情報をまとめています。</p>
+    </section>
+
+    <!-- 記事一覧 -->
+    <section id="articles" class="page">
+      <h2>最新の記事</h2>
+      <div class="content">
+        <article data-article="1">
+          <h3>記事タイトル1</h3>
+          <p>これはサンプル記事1の概要です。</p>
+        </article>
+        <article data-article="2">
+          <h3>記事タイトル2</h3>
+          <p>これはサンプル記事2の概要です。</p>
+        </article>
+        <article data-article="3">
+          <h3>記事タイトル3</h3>
+          <p>これはサンプル記事3の概要です。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 個別記事ページ -->
+    <section id="article-page" class="page">
+      <button id="back-to-list">← 記事一覧に戻る</button>
+      <div id="article-content"></div>
+    </section>
+
+    <!-- お問い合わせ -->
+    <section id="contact" class="page">
+      <h2>お問い合わせ</h2>
+      <p>ご意見・ご感想などがありましたら、お気軽にどうぞ！</p>
+      <form>
+        <label>お名前：<br><input type="text" placeholder="例）山田太郎"></label><br><br>
+        <label>メール：<br><input type="email" placeholder="example@mail.com"></label><br><br>
+        <label>内容：<br><textarea rows="4" placeholder="ここに入力..."></textarea></label><br><br>
+        <button type="button" onclick="alert('送信機能はダミーです！')">送信</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Awesome Page. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+<noscript>
+  <style>
+    body {
+      visibility: visible !important;
+      background: #fff;
+      color: #333;
+      font-family: sans-serif;
+      padding: 2rem;
+      text-align: center;
+    }
+    header, main, footer { display: none; }
+  </style>
+  <div>
+    <h1>JavaScriptが無効になっています</h1>
+    <p>
+      このページを正しく表示するには、ブラウザの設定で
+      <strong>JavaScriptを有効にしてください。</strong>
+    </p>
+    <p>（機能がご利用になれません）</p>
+  </div>
+</noscript>
+
+
+</html>

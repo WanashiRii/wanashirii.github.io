@@ -1,0 +1,126 @@
+/* ====== 全体設定 ====== */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* レイアウト全体を上下に伸ばす */
+body {
+  display: flex;
+  flex-direction: column;
+  visibility: hidden; /* 初期状態で非表示 */
+}
+
+/* ====== ヘッダー ====== */
+header {
+  background-color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  color: #007bff;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+/* ====== メインコンテンツ ====== */
+main {
+  flex: 1; /* フッターを下に押し出す */
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 123, 255, 0.5), rgba(0, 123, 255, 0.5)), url('hero-image.jpg');
+  background-size: cover;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.content article {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.content article:hover {
+  background-color: #f8f8f8;
+}
+
+#article-page {
+  animation: fadeIn 0.3s;
+}
+
+#article-page button {
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#article-page button:hover {
+  background: #0056b3;
+}
+
+/* ====== ページ切り替え ====== */
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+/* ====== フッター ====== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  flex-shrink: 0; /* 下に固定される */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

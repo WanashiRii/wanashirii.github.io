@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "新しい記事のテスト",
+    "date": "2025-11-03",
+    "image": "images/sample1.jpg",
+    "audio": "sounds/voice1.mp3",
+    "content": "<p>この記事では <a href='https://example.com'>外部リンク</a> を紹介します。</p><p>そして下に画像と音声もあります。</p>"
+  },
+  {
+    "id": 2,
+    "title": "シンプルな記事",
+    "date": "2025-10-31",
+    "content": "<p>テキストだけの記事もOKです。</p>"
+  }
+]
