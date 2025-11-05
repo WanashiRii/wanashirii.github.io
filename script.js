@@ -54,7 +54,9 @@ function renderArticleList() {
 // ===== 個別記事ページ表示 =====
 function showArticle(id) {
   const data = articlesData.find(a => String(a.id) === String(id));
-  const container = document.getElementById('article-content');
+  
+  const container = date.getElementById('article-content');
+  container += document.getElementById('article-content');
   if (!data) {
     history.replaceState({}, '', '#articles');
     showPage('articles');
